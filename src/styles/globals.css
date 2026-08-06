@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800;900&display=swap");
+
+@import "tailwindcss";
+
+/* Tailwind v4: enable class-based dark mode so toggling adds/removes
+   `dark` on <html> instead of only following the OS setting. This makes
+   every `dark:` utility class in the app respond to ThemeContext. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --fx-primary: #2563EB;
+  --fx-primary-dark: #1D4ED8;
+  --fx-secondary: #10B981;
+  --fx-accent: #F59E0B;
+
+  --fx-bg: #F8FAFC;
+
+  --fx-surface: #FFFFFF;
+
+  --fx-text: #0F172A;
+
+  --fx-muted: #64748B;
+
+  --fx-border: #E2E8F0;
+
+  --fx-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 1px 1px rgba(15, 23, 42, 0.03);
+  --fx-shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 32px -12px rgba(15, 23, 42, 0.12);
+  --fx-shadow-hover: 0 4px 8px rgba(15, 23, 42, 0.04), 0 24px 48px -12px rgba(15, 23, 42, 0.18);
+  --fx-shadow-glow: 0 0 0 1px rgba(37, 99, 235, 0.08), 0 20px 40px -16px rgba(37, 99, 235, 0.35);
+}
+
+.dark {
+  --fx-primary: #3B82F6;
+  --fx-primary-dark: #60A5FA;
+  --fx-secondary: #34D399;
+  --fx-accent: #FBBF24;
+
+  --fx-bg: #0B1120;
+
+  --fx-surface: #111827;
+
+  --fx-text: #F1F5F9;
+
+  --fx-muted: #94A3B8;
+
+  --fx-border: #1E293B;
+
+  --fx-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.25);
+  --fx-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px -12px rgba(0, 0, 0, 0.55);
+  --fx-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.3), 0 24px 48px -12px rgba(0, 0, 0, 0.6);
+  --fx-shadow-glow: 0 0 0 1px rgba(59, 130, 246, 0.15), 0 20px 40px -16px rgba(59, 130, 246, 0.45);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--fx-bg);
+  color: var(--fx-text);
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "ss01" on, "cv11" on;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: var(--fx-primary);
+  color: #fff;
+}
+
+/* Slim, quiet scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 999px;
+  border: 2px solid var(--fx-bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Consistent, visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--fx-primary);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* Reusable premium surface helpers */
+.fx-noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+.fx-grid-fade {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 40%, transparent 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

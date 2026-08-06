@@ -1,0 +1,101 @@
+// src/data/clubs/healthIdeas.ts
+import type { ClubIdea } from "./types";
+
+export const healthIdeas: ClubIdea[] = [
+  {
+    id: "health-001",
+    category: "health",
+    title: "Peer Mental Health Awareness",
+    summary: "Create simple campaigns that promote emotional wellbeing.",
+    description:
+      "Students learn about stress, kindness and seeking help, then share positive messages through posters, talks or small events.",
+    steps: [
+      "Research basic mental health facts from reliable sources",
+      "Design simple, positive posters or short videos",
+      "Organise a Kindness Week or quiet sharing circle",
+      "Invite a counsellor or teacher to speak if possible",
+      "Share helpline numbers and school support options",
+      "Encourage students to check on one another",
+    ],
+    materials: [
+      "Poster paper and markers",
+      "Reliable information sources",
+      "Quiet space for discussions",
+    ],
+    safetyPrecautions: [
+      "Never try to counsel serious cases — refer to professionals",
+      "Respect privacy — do not force anyone to share",
+      "Use only accurate, age-appropriate information",
+      "Have a teacher or counsellor involved",
+    ],
+    difficulty: "Medium",
+    ageGroup: "13-18",
+    timeNeeded: "1-2 weeks",
+    xpReward: 40,
+    coinReward: 20,
+    tags: ["mental health", "kindness", "awareness"],
+    icon: "💚",
+  },
+  {
+    id: "health-002",
+    category: "health",
+    title: "Basic First Aid Training",
+    summary: "Learn and practise essential first aid skills as a club.",
+    description:
+      "Students learn how to handle common injuries and emergencies safely while waiting for professional help.",
+    steps: [
+      "Invite a trained first-aider or nurse if possible",
+      "Learn hand hygiene and glove use",
+      "Practise treating small cuts and burns",
+      "Learn the recovery position",
+      "Practise how to call for help clearly",
+      "Create a simple first-aid poster for the school",
+    ],
+    materials: [
+      "Clean cloths or bandages",
+      "Gloves",
+      "First-aid manual or trusted video",
+    ],
+    safetyPrecautions: [
+      "This is basic awareness only — not a replacement for professional training",
+      "Never practise on real injuries without supervision",
+      "Always call for adult help in real emergencies",
+    ],
+    difficulty: "Medium",
+    ageGroup: "13-18",
+    timeNeeded: "3-4 hours",
+    xpReward: 45,
+    coinReward: 22,
+    tags: ["first aid", "safety", "life skills"],
+    icon: "🩹",
+  },
+  {
+    id: "health-003",
+    category: "health",
+    title: "Fitness Challenge Club",
+    summary: "Organise fun weekly fitness challenges for students.",
+    description:
+      "Students create simple, inclusive fitness challenges that encourage movement without expensive equipment.",
+    steps: [
+      "Design easy weekly challenges (e.g. 20 squats, walking challenge)",
+      "Make it inclusive for different fitness levels",
+      "Track participation in a fun way",
+      "Celebrate consistency, not just performance",
+      "Share safety tips for exercising",
+    ],
+    materials: ["Open space", "Water", "Simple tracking sheet"],
+    safetyPrecautions: [
+      "Warm up before any exercise",
+      "Students with health conditions should get advice first",
+      "Never force anyone to participate",
+      "Stay hydrated and avoid extreme weather",
+    ],
+    difficulty: "Easy",
+    ageGroup: "11-17",
+    timeNeeded: "Ongoing",
+    xpReward: 30,
+    coinReward: 15,
+    tags: ["fitness", "wellness", "habit"],
+    icon: "🏃",
+  },
+];

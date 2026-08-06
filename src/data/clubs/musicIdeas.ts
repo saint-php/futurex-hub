@@ -1,0 +1,91 @@
+// src/data/clubs/musicIdeas.ts
+import type { ClubIdea } from "./types";
+
+export const musicIdeas: ClubIdea[] = [
+  {
+    id: "music-001",
+    category: "music",
+    title: "Acapella / Vocal Group",
+    summary: "Form a small vocal group that performs without instruments.",
+    description:
+      "Students learn harmony, timing and stage presence while creating music using only their voices.",
+    steps: [
+      "Invite interested singers",
+      "Choose simple songs everyone can learn",
+      "Divide into voice parts",
+      "Practice regularly in a quiet space",
+      "Add light movement if desired",
+      "Perform at school events",
+    ],
+    materials: ["Quiet practice room", "Lyrics sheets", "Phone for recording practice"],
+    safetyPrecautions: [
+      "Warm up the voice properly",
+      "Stay hydrated",
+      "Do not strain the voice",
+      "Respect different skill levels",
+    ],
+    difficulty: "Medium",
+    ageGroup: "12-18",
+    timeNeeded: "Ongoing",
+    xpReward: 35,
+    coinReward: 18,
+    tags: ["singing", "harmony", "performance"],
+    icon: "🎤",
+  },
+  {
+    id: "music-002",
+    category: "music",
+    title: "Instrument Learning Circles",
+    summary: "Students teach each other basic instrument skills.",
+    description:
+      "Those who can play a little teach beginners in small friendly groups.",
+    steps: [
+      "Find students who can play any instrument",
+      "Pair them with beginners",
+      "Start with very simple songs",
+      "Practise for short, focused sessions",
+      "Perform a short piece for the club after a few weeks",
+    ],
+    materials: ["Whatever instruments are available", "Patience"],
+    safetyPrecautions: [
+      "Handle instruments carefully",
+      "Keep volume reasonable",
+      "Take turns so everyone gets a chance",
+    ],
+    difficulty: "Easy",
+    ageGroup: "11-17",
+    timeNeeded: "Ongoing",
+    xpReward: 30,
+    coinReward: 15,
+    tags: ["instruments", "peer teaching"],
+    icon: "🎸",
+  },
+  {
+    id: "music-003",
+    category: "music",
+    title: "School Anthem Remix Challenge",
+    summary: "Create respectful modern versions of the school anthem or popular songs.",
+    description:
+      "Students arrange or add simple harmonies and rhythms to familiar songs while staying respectful.",
+    steps: [
+      "Choose a suitable song (school anthem or well-known piece)",
+      "Experiment with different rhythms or harmonies",
+      "Practise the new version",
+      "Record it using the Voice Studio",
+      "Present it to the club for feedback",
+    ],
+    materials: ["Voice Studio", "Lyrics", "Creativity"],
+    safetyPrecautions: [
+      "Keep remixes respectful and appropriate",
+      "Do not mock the original song",
+      "Get teacher approval before public performance",
+    ],
+    difficulty: "Medium",
+    ageGroup: "13-18",
+    timeNeeded: "1-2 weeks",
+    xpReward: 35,
+    coinReward: 18,
+    tags: ["creativity", "arrangement", "performance"],
+    icon: "🎵",
+  },
+];
