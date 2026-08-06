@@ -3,11 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
- "scripts": {
-  "build": "npx tsc -b && vite build",
-  // or
-  "build": "node node_modules/typescript/bin/tsc -b && vite build"
-}
+  "scripts": {
+    "dev": "vite",
+    "build": "npx tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
   "dependencies": {
     "@hookform/resolvers": "^5.5.7",
     "@tailwindcss/vite": "^4.3.3",
