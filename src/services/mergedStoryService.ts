@@ -14,7 +14,7 @@ import {
   getStoriesByCategory as staticByCategory,
   getStoryById as staticById,
   getCategoriesWithCounts as staticCategories,
-  searchStories as staticSearch,
+  
   type Story,
 } from "../data/stories";
 import type { StoryCategory } from "../data/storyCategories";

@@ -2,7 +2,7 @@ import {
   BookOpen,
   BookMarked,
   FileText,
-  FlaskConical,
+  
   Lightbulb,
   Gamepad2,
 } from "lucide-react";

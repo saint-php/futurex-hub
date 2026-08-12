@@ -93,37 +93,7 @@ export default function MusicStudioPage() {
   }
 
   // Simple echo using Web Audio API
-  function applyEcho() {
-    if (!audioURL || !audioRef.current) return;
-
-    if (!audioContextRef.current) {
-      audioContextRef.current = new AudioContext();
-    }
-
-    const ctx = audioContextRef.current;
-    const source = ctx.createMediaElementSource(audioRef.current);
-
-    if (echo) {
-      const delay = ctx.createDelay();
-      delay.delayTime.value = 0.25;
-
-      const feedback = ctx.createGain();
-      feedback.gain.value = 0.35;
-
-      const dry = ctx.createGain();
-      dry.gain.value = 1;
-
-      source.connect(dry);
-      dry.connect(ctx.destination);
-
-      source.connect(delay);
-      delay.connect(feedback);
-      feedback.connect(delay);
-      delay.connect(ctx.destination);
-    } else {
-      source.connect(ctx.destination);
-    }
-  }
+ 
 
   // Simple beat generator
   function startBeat() {
