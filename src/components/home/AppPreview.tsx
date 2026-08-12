@@ -3,10 +3,12 @@ import {
   BookOpen,
   GraduationCap,
   Gamepad2,
-  Atom,
-  School,
-  BookMarked,
+  Lightbulb,
+  Library,
+  Users,
+  Search,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const apps = [
   {
@@ -14,40 +16,61 @@ const apps = [
     icon: <BookOpen size={26} />,
     color: "from-blue-500 to-cyan-500",
     live: true,
-  },
-  {
-    title: "StoryVerse",
-    icon: <BookMarked size={26} />,
-    color: "from-purple-500 to-pink-500",
-    live: false,
+    path: "/dashboard/vocabulary",
   },
   {
     title: "CBT Practice",
     icon: <GraduationCap size={26} />,
     color: "from-green-500 to-emerald-500",
-    live: false,
+    live: true,
+    path: "/dashboard/cbt",
   },
   {
-    title: "Science",
-    icon: <Atom size={26} />,
+    title: "Study Courses",
+    icon: <Library size={26} />,
+    color: "from-indigo-500 to-blue-600",
+    live: true,
+    path: "/dashboard/study-online",
+  },
+  {
+    title: "Story Books",
+    icon: <BookOpen size={26} />,
+    color: "from-purple-500 to-pink-500",
+    live: true,
+    path: "/dashboard/stories",
+  },
+  {
+    title: "Amazing Facts",
+    icon: <Lightbulb size={26} />,
     color: "from-orange-500 to-red-500",
-    live: false,
+    live: true,
+    path: "/dashboard/amazing-facts",
   },
   {
-    title: "Games",
+    title: "Clubs",
+    icon: <Users size={26} />,
+    color: "from-teal-500 to-cyan-600",
+    live: true,
+    path: "/dashboard/clubs",
+  },
+  {
+    title: "Dictionary",
+    icon: <Search size={26} />,
+    color: "from-violet-500 to-indigo-600",
+    live: true,
+    path: "/dashboard/dictionary",
+  },
+  {
+    title: "Educational Games",
     icon: <Gamepad2 size={26} />,
     color: "from-yellow-500 to-orange-500",
-    live: false,
-  },
-  {
-    title: "School Portal",
-    icon: <School size={26} />,
-    color: "from-indigo-500 to-blue-600",
     live: false,
   },
 ];
 
 export default function AppPreview() {
+  const navigate = useNavigate();
+
   return (
     <div className="grid grid-cols-2 gap-5 lg:grid-cols-3">
       {apps.map((app, index) => (
@@ -63,7 +86,15 @@ export default function AppPreview() {
             scale: 1.04,
             y: -8,
           }}
-          className="group relative flex h-40 cursor-pointer flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900/40 p-5 shadow-[0_1px_0_0_rgba(255,255,255,0.06)_inset,0_20px_40px_-16px_rgba(0,0,0,0.5)] backdrop-blur-sm transition-shadow duration-300 hover:shadow-[0_1px_0_0_rgba(255,255,255,0.1)_inset,0_28px_56px_-16px_rgba(0,0,0,0.6)]"
+          onClick={() => {
+            if (app.live && app.path) {
+              navigate(app.path);
+            }
+          }}
+          className={[
+            "group relative flex h-40 flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900/40 p-5 shadow-[0_1px_0_0_rgba(255,255,255,0.06)_inset,0_20px_40px_-16px_rgba(0,0,0,0.5)] backdrop-blur-sm transition-shadow duration-300 hover:shadow-[0_1px_0_0_rgba(255,255,255,0.1)_inset,0_28px_56px_-16px_rgba(0,0,0,0.6)]",
+            app.live ? "cursor-pointer" : "cursor-default",
+          ].join(" ")}
         >
           <div
             className={`absolute inset-0 bg-gradient-to-br ${app.color} opacity-90 transition-opacity duration-300 group-hover:opacity-100`}
@@ -71,7 +102,6 @@ export default function AppPreview() {
 
           <div className="fx-noise pointer-events-none absolute inset-0 opacity-40" />
 
-          {/* Status badge — pinned, single line, never wraps or clips */}
           <span
             className={[
               "absolute right-4 top-4 whitespace-nowrap rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide backdrop-blur-sm",
@@ -97,3 +127,4 @@ export default function AppPreview() {
     </div>
   );
 }
+
