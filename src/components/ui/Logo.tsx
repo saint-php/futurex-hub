@@ -3,7 +3,7 @@ export default function Logo() {
     <div className="flex items-center gap-4">
       <img
         src="/brand/logo.jpeg"
-        alt="Future X Horixon"
+        alt="FutureX-Hub Horixon"
         className="h-16 w-16 rounded-xl object-cover"
       />
 
