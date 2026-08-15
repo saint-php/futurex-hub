@@ -15,13 +15,13 @@ export default function Navbar() {
         <Link to="/" className="group flex items-center gap-3">
           <img
             src="/brand/logo.jpeg"
-            alt="Future X"
+            alt="FutureX-Hub Horixon"
             className="h-11 w-11 rounded-xl object-cover ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105"
           />
 
           <div>
             <h1 className="text-lg font-bold tracking-tight text-white">
-              Future X Horixon
+              FutureX-Hub Horixon
             </h1>
 
             <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-slate-500">
