@@ -16,7 +16,7 @@ export default function CTASection() {
         </h2>
 
         <p className="mx-auto mt-5 max-w-md text-lg leading-relaxed text-blue-100">
-          Join Future X and unlock the future of education.
+          Join FutureX-Hub Horixon and unlock the future of education.
         </p>
 
         <Link
