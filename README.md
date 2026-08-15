@@ -1,6 +1,6 @@
-# Future X
+# Future X HORIXON
 
-Future X is a unified educational ecosystem designed to help learners study, practice, play, and grow.
+Future X Horixon is a unified educational ecosystem designed to help learners study, practice, play, and grow.
 
 ## Current Status
 
