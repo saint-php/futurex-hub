@@ -36,7 +36,7 @@ export default function Sidebar({ collapsed, onToggle }: Props) {
             className="overflow-hidden whitespace-nowrap"
           >
             <p className="text-base font-black leading-tight tracking-tight text-slate-900 dark:text-slate-50">
-              Future X
+              FutureX
             </p>
             <p className="text-[11px] font-medium uppercase tracking-wide text-slate-400 dark:text-slate-500">
               Learning Hub
