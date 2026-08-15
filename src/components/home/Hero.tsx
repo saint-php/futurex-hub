@@ -52,7 +52,7 @@ export default function Hero() {
             transition={{ delay: 0.5 }}
             className="mt-8 max-w-xl text-lg leading-8 text-slate-300"
           >
-            Future X Horixon is building Africa's next educational ecosystem,
+            FutureX-Hub Horixon is building Africa's next educational ecosystem,
             bringing together vocabulary building, children's storybooks,
             CBT practice, science learning, educational games and school
             management into one intelligent learning platform.
