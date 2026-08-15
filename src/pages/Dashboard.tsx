@@ -66,7 +66,7 @@ export default function Dashboard() {
         <div className="mb-6 flex items-end justify-between">
           <div>
             <h2 className="text-xl font-bold tracking-tight text-slate-900">
-              Explore Future X Horixon
+              Explore FutureX-Hub Horixon
             </h2>
             <p className="mt-1 text-sm text-slate-500">
               One learning apps is live — the rest are on the way.
