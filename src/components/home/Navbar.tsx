@@ -21,7 +21,7 @@ export default function Navbar() {
 
           <div>
             <h1 className="text-lg font-bold tracking-tight text-white">
-              Future X
+              Future X Horixon
             </h1>
 
             <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-slate-500">
